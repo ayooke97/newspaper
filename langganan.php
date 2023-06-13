@@ -22,7 +22,7 @@ $dharga = base64_decode($_GET['harga']);
         </div>
         <div class="info">
             <p style="text-align: center; font-size: 3rem">
-                Anda berlangganan selama<br>
+                Sisa waktu : <br>
                 <?php if ((isset($_GET['subs']) && $_GET['harga'])) : ?>
             <h1>
                 <?= "{$langganan} : {$harga}" ?>

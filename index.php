@@ -8,7 +8,7 @@ include_once './PHPMailer/src/Exception.php';
     use PHPMailer\PHPMailer\SMTP;   
     use PHPMailer\PHPMailer\Exception;
 //Create Instance
-
+$email = $_POST['email'];
 $mail = new PHPMailer();
 $mail->isSMTP();
 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -20,8 +20,8 @@ $mail->Username = 'bakti12356@gmail.com';
 $mail->Password = 'xizqhtwwrlslhhbq';
 $mail->isHTML(true);
 $mail->setFrom('noreply@radarbjm.com', 'Radar Banjarmasin');
-$mail->addReplyTo('181111025@mhs.stiki.ac.id', 'TEST');
-$mail->addAddress('181111025@mhs.stiki.ac.id', '');
+$mail->addReplyTo($email, 'TEST');
+$mail->addAddress($email, 'awokaokwaokoaw');
 $mail->Subject = 'Percobaan SMTP';
 ob_start();
 include_once './contents.php';
